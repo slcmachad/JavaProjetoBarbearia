@@ -10,10 +10,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-/**
- *
- * @author tiago
- */
 public class Login extends javax.swing.JFrame {
 
     private final LoginControler controler;

@@ -5,10 +5,7 @@
  */
 package barbershop.View;
 
-/**
- *
- * @author tiago
- */
+
 public class MenuPrincipal extends javax.swing.JFrame {
 
     /**
