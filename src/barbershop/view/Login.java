@@ -9,6 +9,7 @@ import controler.LoginControler;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import model.DAO.Banco;
 
 public class Login extends javax.swing.JFrame {
 
@@ -20,6 +21,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         controler = new LoginControler(this);
+        Banco.inicia();
     }
 
     /**
