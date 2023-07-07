@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class Pessoa {
+public abstract class Pessoa {
     
     protected int id;
     protected String nome;
