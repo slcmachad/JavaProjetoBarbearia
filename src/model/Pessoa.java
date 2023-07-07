@@ -1,6 +1,10 @@
 package model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public abstract class Pessoa {
     
@@ -17,11 +21,15 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public Pessoa(int id, String nome, char sexo, Date nascimento, String telefone, String email, String rg) {
+    public Pessoa(int id, String nome, char sexo, String nascimento, String telefone, String email, String rg) {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
-        this.nascimento = nascimento;
+        try {
+            this.nascimento = new SimpleDateFormat("dd/MM/yyyy").parse(nascimento);
+        } catch (ParseException ex) {
+            Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.telefone = telefone;
         this.email = email;
         this.rg = rg;
