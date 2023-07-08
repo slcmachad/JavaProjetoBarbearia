@@ -6,6 +6,7 @@
 package barbershop.View;
 
 import controler.AgendaControler;
+import javax.swing.JTable;
 
 public class Agenda extends javax.swing.JFrame {
 
@@ -155,13 +156,10 @@ public class Agenda extends javax.swing.JFrame {
         TableAgendamentos.setForeground(new java.awt.Color(0, 0, 0));
         TableAgendamentos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "Alan", "Corte", "10", "22/04/2018", "08:00", ""},
-                {"2", "Abigail", "Barba", "20", "22/04/2018", "09:00", "Pode se Atrazar um pouco"},
-                {"3", "Pedro", "Barba", "20", "23/04/2018", "08:00", null},
-                {"4", "Teste", "Barba + Corte", "30", "23/04/2018", "09:00", null}
+
             },
             new String [] {
-                "Id", "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
+                "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
             }
         ));
         TableAgendamentos.setShowGrid(true);
@@ -252,4 +250,14 @@ public class Agenda extends javax.swing.JFrame {
     private void iniciar() {
         this.controler.atualizaTabela();
     }
+
+    public JTable getTableAgendamentos() {
+        return TableAgendamentos;
+    }
+
+    public void setTableAgendamentos(JTable TableAgendamentos) {
+        this.TableAgendamentos = TableAgendamentos;
+    }
+    
+    
 }
