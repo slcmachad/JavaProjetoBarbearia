@@ -17,6 +17,7 @@ public class Agenda extends javax.swing.JFrame {
     public Agenda() {
         initComponents();
         controler = new AgendaControler(this);
+        iniciar();
     }
 
     /**
@@ -247,4 +248,8 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controler.atualizaTabela();
+    }
 }
