@@ -5,13 +5,18 @@
  */
 package barbershop.View;
 
+import controler.AgendaControler;
+
 public class Agenda extends javax.swing.JFrame {
+
+    private final AgendaControler controler;
 
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        controler = new AgendaControler(this);
     }
 
     /**
@@ -45,7 +50,7 @@ public class Agenda extends javax.swing.JFrame {
         LabelAgendaPainelFundo = new javax.swing.JLabel();
         LabelAgendaFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LabelAgenda.setFont(new java.awt.Font("Liberation Sans", 1, 36)); // NOI18N
