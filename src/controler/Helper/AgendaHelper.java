@@ -3,7 +3,6 @@ package controler.Helper;
 import barbershop.View.Agenda;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
 import model.Agendamento;
 import model.Cliente;
@@ -56,6 +55,16 @@ public class AgendaHelper {
             comboBoxMode.addElement(servico);
         }
         
+    }
+
+    public Servico obterServico() {
+        
+        return (Servico) view.getJComboBoxServico().getSelectedItem();
+        
+    }
+
+    public void setarValor(float valor) {
+        view.getTextValor().setText(valor + "");
     }
     
     

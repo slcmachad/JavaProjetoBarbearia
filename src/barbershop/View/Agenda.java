@@ -8,6 +8,7 @@ package barbershop.View;
 import controler.AgendaControler;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 public class Agenda extends javax.swing.JFrame {
 
@@ -109,6 +110,11 @@ public class Agenda extends javax.swing.JFrame {
         JComboBoxServico.setBackground(new java.awt.Color(255, 255, 255));
         JComboBoxServico.setEditable(true);
         JComboBoxServico.setForeground(new java.awt.Color(0, 0, 0));
+        JComboBoxServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                JComboBoxServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(JComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setBackground(new java.awt.Color(255, 255, 255));
@@ -187,6 +193,10 @@ public class Agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TextValorActionPerformed
 
+    private void JComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JComboBoxServicoItemStateChanged
+        this.controler.atualizaValor();
+    }//GEN-LAST:event_JComboBoxServicoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -250,6 +260,7 @@ public class Agenda extends javax.swing.JFrame {
         this.controler.atualizaTabela();
         this.controler.atualizaCliente();
         this.controler.atualizaServico();
+        this.controler.atualizaValor();
     }
 
     public JTable getTableAgendamentos() {
@@ -275,4 +286,14 @@ public class Agenda extends javax.swing.JFrame {
     public void setJComboBoxServico(JComboBox<String> JComboBoxServico) {
         this.JComboBoxServico = JComboBoxServico;
     }
+
+    public JTextField getTextValor() {
+        return TextValor;
+    }
+
+    public void setTextValor(JTextField TextValor) {
+        this.TextValor = TextValor;
+    }
+    
+    
 }
