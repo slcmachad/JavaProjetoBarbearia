@@ -2,8 +2,10 @@ package controler.Helper;
 
 import barbershop.View.Agenda;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import model.Agendamento;
+import model.Cliente;
 
 public class AgendaHelper {
     private final Agenda view;
@@ -31,5 +33,19 @@ public class AgendaHelper {
             );
         }
     }
+
+    public void preencherClientes(ArrayList<Cliente> clientes) {
+        
+        DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getJComboBoxCliente().getModel();
+        
+        for (Cliente cliente : clientes) {
+            
+            comboBoxModel.addElement(cliente);
+            
+        }
+        
+    }
+    
+    
     
 }

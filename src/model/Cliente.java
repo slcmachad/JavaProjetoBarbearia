@@ -35,4 +35,9 @@ public class Cliente extends Pessoa{
         this.endereco = endereco;
     }
     
+    @Override
+    public String toString(){
+        return getNome();
+    }
+    
 }

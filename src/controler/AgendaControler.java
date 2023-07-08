@@ -4,7 +4,9 @@ import barbershop.View.Agenda;
 import controler.Helper.AgendaHelper;
 import java.util.ArrayList;
 import model.Agendamento;
+import model.Cliente;
 import model.DAO.AgendamentoDAO;
+import model.DAO.ClienteDAO;
 
 public class AgendaControler {
     private final Agenda view;
@@ -21,6 +23,13 @@ public class AgendaControler {
         ArrayList<Agendamento> agendamentos = agendamentoDAO.selectAll();
         
         helper.preencherTabela(agendamentos);
+    }
+    
+    public void atualizaCliente(){
+        
+        ClienteDAO clienteDao = new ClienteDAO();
+        ArrayList<Cliente> clientes = clienteDao.selectAll();
+        helper.preencherClientes(clientes);
     }
 
 }
