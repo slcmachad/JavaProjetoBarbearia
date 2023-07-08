@@ -3,9 +3,11 @@ package controler.Helper;
 import barbershop.View.Agenda;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.table.DefaultTableModel;
 import model.Agendamento;
 import model.Cliente;
+import model.Servico;
 
 public class AgendaHelper {
     private final Agenda view;
@@ -42,6 +44,16 @@ public class AgendaHelper {
             
             comboBoxModel.addElement(cliente);
             
+        }
+        
+    }
+
+    public void preencherServicos(ArrayList<Servico> servicos) {
+        
+        DefaultComboBoxModel comboBoxMode = (DefaultComboBoxModel) view.getJComboBoxServico().getModel();
+        
+        for (Servico servico : servicos) {
+            comboBoxMode.addElement(servico);
         }
         
     }

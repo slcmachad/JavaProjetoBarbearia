@@ -7,6 +7,8 @@ import model.Agendamento;
 import model.Cliente;
 import model.DAO.AgendamentoDAO;
 import model.DAO.ClienteDAO;
+import model.DAO.ServicoDAO;
+import model.Servico;
 
 public class AgendaControler {
     private final Agenda view;
@@ -30,6 +32,12 @@ public class AgendaControler {
         ClienteDAO clienteDao = new ClienteDAO();
         ArrayList<Cliente> clientes = clienteDao.selectAll();
         helper.preencherClientes(clientes);
+    }
+    
+    public void atualizaServico(){
+        ServicoDAO servicoDao = new ServicoDAO();
+        ArrayList<Servico> servicos = servicoDao.selectAll();
+        helper.preencherServicos(servicos);
     }
 
 }

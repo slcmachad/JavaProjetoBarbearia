@@ -249,6 +249,7 @@ public class Agenda extends javax.swing.JFrame {
     private void iniciar() {
         this.controler.atualizaTabela();
         this.controler.atualizaCliente();
+        this.controler.atualizaServico();
     }
 
     public JTable getTableAgendamentos() {
@@ -274,8 +275,4 @@ public class Agenda extends javax.swing.JFrame {
     public void setJComboBoxServico(JComboBox<String> JComboBoxServico) {
         this.JComboBoxServico = JComboBoxServico;
     }
-    
-    
-    
-    
 }
