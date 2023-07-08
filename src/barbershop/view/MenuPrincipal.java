@@ -46,7 +46,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuCadastro.setFont(new java.awt.Font("DejaVu Sans", 1, 18)); // NOI18N
 
         MenuItemCliente.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        MenuItemCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/cliente32-icon.png"))); // NOI18N
+        MenuItemCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/barbershop/View/imagens/icons/cliente32-icon.png"))); // NOI18N
         MenuItemCliente.setText("  Cliente");
         MenuItemCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,12 +56,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuCadastro.add(MenuItemCliente);
 
         MenuItemServico.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        MenuItemServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/tesoura32-icon.png"))); // NOI18N
+        MenuItemServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/barbershop/View/imagens/icons/tesoura32-icon.png"))); // NOI18N
         MenuItemServico.setText("  Serviço");
         MenuCadastro.add(MenuItemServico);
 
         MenuItemUsuario.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        MenuItemUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/usuario32-icon.png"))); // NOI18N
+        MenuItemUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/barbershop/View/imagens/icons/usuario32-icon.png"))); // NOI18N
         MenuItemUsuario.setText("  Usuario");
         MenuCadastro.add(MenuItemUsuario);
 
@@ -71,7 +71,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuOperacao.setFont(new java.awt.Font("DejaVu Sans", 1, 18)); // NOI18N
 
         MenuItemAgenda.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        MenuItemAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/agenda32-icon.png"))); // NOI18N
+        MenuItemAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/barbershop/View/imagens/icons/agenda32-icon.png"))); // NOI18N
         MenuItemAgenda.setText("  Agenda");
         MenuOperacao.add(MenuItemAgenda);
 
@@ -81,7 +81,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuRelatorio.setFont(new java.awt.Font("DejaVu Sans", 1, 18)); // NOI18N
 
         MenuItemRelatorio.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        MenuItemRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/relatorioTrabalho32-icon.png"))); // NOI18N
+        MenuItemRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/barbershop/View/imagens/icons/relatorioTrabalho32-icon.png"))); // NOI18N
         MenuItemRelatorio.setText("  Trabalho");
         MenuItemRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -1,7 +1,9 @@
 package controler;
 
 import barbershop.View.Login;
+import barbershop.View.MenuPrincipal;
 import controler.Helper.LoginHelper;
+import model.DAO.UsuarioDAO;
 import model.Usuario;
 
 public class LoginControler {
@@ -17,6 +19,16 @@ public class LoginControler {
     public void entrarNoSistema(){
 
         Usuario usuario = helper.obterModelo();
+        
+        UsuarioDAO usuarioDao = new UsuarioDAO();
+        Usuario usuarioAutenticado = usuarioDao.selectPorNomeESenha(usuario);
+        
+        if(usuarioAutenticado != null){
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.setVisible(true);
+        }else {
+            view.exibeMensagem("Usuário ou senha inválidos!");
+        }
     }
     
     public void fizTarefa(){
