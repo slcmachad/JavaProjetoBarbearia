@@ -26,6 +26,7 @@ public class LoginControler {
         if(usuarioAutenticado != null){
             MenuPrincipal menu = new MenuPrincipal();
             menu.setVisible(true);
+            this.view.dispose();
         }else {
             view.exibeMensagem("Usuário ou senha inválidos!");
         }

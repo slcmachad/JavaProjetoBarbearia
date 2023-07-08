@@ -5,14 +5,20 @@
  */
 package barbershop.View;
 
+import controler.MenuPrincipalControler;
+
 
 public class MenuPrincipal extends javax.swing.JFrame {
 
+    private final MenuPrincipalControler controler;
+
+    
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
+        this.controler = new MenuPrincipalControler(this);
     }
 
     /**
@@ -73,6 +79,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuItemAgenda.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         MenuItemAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/barbershop/View/imagens/icons/agenda32-icon.png"))); // NOI18N
         MenuItemAgenda.setText("  Agenda");
+        MenuItemAgenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemAgendaActionPerformed(evt);
+            }
+        });
         MenuOperacao.add(MenuItemAgenda);
 
         jMenuBar1.add(MenuOperacao);
@@ -104,6 +115,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void MenuItemRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRelatorioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuItemRelatorioActionPerformed
+
+    private void MenuItemAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemAgendaActionPerformed
+        this.controler.navegarParaAgenda();
+    }//GEN-LAST:event_MenuItemAgendaActionPerformed
 
     /**
      * @param args the command line arguments
