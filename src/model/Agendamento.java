@@ -21,7 +21,7 @@ public class Agendamento {
         this.servico = servico;
         this.valor = valor;
         try {
-            this.data = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data);
+            this.data = new SimpleDateFormat("dd/MM/y HH:mm").parse(data);
         } catch (ParseException ex) {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -68,16 +68,16 @@ public class Agendamento {
         return data;
     }
     
+    public void setData(Date data) {
+        this.data = data;
+    }
+    
     public String getDataFormatada(){
         return new SimpleDateFormat("dd/MM/yyyy").format(data);
     }
     
     public String getHoraFormatada(){
         return new SimpleDateFormat("HH:mm").format(data); 
-    }
-
-    public void setData(Date data) {
-        this.data = data;
     }
 
     public String getObservacao() {

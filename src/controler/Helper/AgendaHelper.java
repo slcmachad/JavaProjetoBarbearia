@@ -75,8 +75,7 @@ public class AgendaHelper implements IHelper{
 
     @Override
     public Agendamento obterModelo() {
-        String idString = view.getTextId().getText();
-        int id = Integer.parseInt(idString);
+        Integer id = Integer.parseInt(view.getTextId().getText());
         Cliente cliente = obterCliente();
         Servico servico = obterServico();
         String valorString = view.getTextValor().getText();
@@ -86,9 +85,7 @@ public class AgendaHelper implements IHelper{
         String dataHora = data + " " + hora;
         String observacao = view.getTextObservacao().getText();
         
-        Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, observacao);
-        
-        return agendamento;
+        return new Agendamento(id, cliente, servico, valor, dataHora, observacao);
     }
 
     @Override

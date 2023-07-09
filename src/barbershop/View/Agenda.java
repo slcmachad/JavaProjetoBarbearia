@@ -132,7 +132,11 @@ public class Agenda extends javax.swing.JFrame {
 
         TextFormatedData.setBackground(new java.awt.Color(255, 255, 255));
         TextFormatedData.setForeground(new java.awt.Color(0, 0, 0));
-        TextFormatedData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        TextFormatedData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFormatedDataActionPerformed(evt);
+            }
+        });
         getContentPane().add(TextFormatedData, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 280, 40));
 
         TextFormatedHora.setBackground(new java.awt.Color(255, 255, 255));
@@ -166,7 +170,7 @@ public class Agenda extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
+                "Id", "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
             }
         ));
         TableAgendamentos.setShowGrid(true);
@@ -198,6 +202,10 @@ public class Agenda extends javax.swing.JFrame {
     private void JComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JComboBoxServicoItemStateChanged
         this.controler.atualizaValor();
     }//GEN-LAST:event_JComboBoxServicoItemStateChanged
+
+    private void TextFormatedDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFormatedDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFormatedDataActionPerformed
 
     /**
      * @param args the command line arguments
