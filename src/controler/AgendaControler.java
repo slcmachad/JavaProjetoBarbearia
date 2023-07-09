@@ -44,4 +44,8 @@ public class AgendaControler {
         Servico servico = helper.obterServico();
         helper.setarValor(servico.getValor());
     }
+    
+    public void agendar(){
+        
+    }
 }
