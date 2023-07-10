@@ -1,5 +1,6 @@
 package controler;
 
+import Servico.Correio;
 import barbershop.View.Agenda;
 import controler.Helper.AgendaHelper;
 import java.util.ArrayList;
@@ -50,6 +51,9 @@ public class AgendaControler {
         Agendamento agendamento = helper.obterModelo();
         
         new AgendamentoDAO().insert(agendamento);
+        
+        Correio correio = new Correio();
+        correio.notificarPorEmail(agendamento);
         
         atualizaTabela();
         helper.limparTela();
